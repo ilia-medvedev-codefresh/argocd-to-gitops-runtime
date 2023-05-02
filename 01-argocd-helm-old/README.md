@@ -1,0 +1,1 @@
+Old ArgoCD Helm chart with crds managed in crds folder
