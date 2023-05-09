@@ -6,5 +6,5 @@ Will cause CRD removal and removal of apllicatio resources for applications with
 
 1. Make sure applications don't have finalizers!
 2. Migrate apps to gitsource
-3. Uninstall (Will remove applicaitons)
+3. Uninstall (Will remove applicaitons) with kubectl delete ....
 4. install runtime
