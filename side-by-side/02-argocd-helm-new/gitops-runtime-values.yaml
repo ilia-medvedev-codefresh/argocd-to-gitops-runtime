@@ -1,0 +1,19 @@
+global:
+  codefresh:
+    accountId: 628a80b693a15c0f9c13ab75
+
+  runtime:
+    name: side-by-side
+
+    ingress:
+      enabled: false
+
+argo-cd:
+  fullnameOverride: codefresh-argo-cd
+  crds:
+    install: false
+  configs:
+    cm:
+      timeout.reconciliation: 20s
+      accounts.admin: apiKey,login
+      application.resourceTrackingMethod: annotation+label
