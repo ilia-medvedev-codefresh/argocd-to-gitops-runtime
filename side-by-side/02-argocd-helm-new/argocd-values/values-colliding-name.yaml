@@ -1,0 +1,13 @@
+# Values for worst case for side by side - the same release name and the same tracking label method (label + annotation)
+
+fullnameOverride: argo-cd
+crds:
+  install: true
+configs:
+  cm:
+    timeout.reconciliation: 20s
+    accounts.admin: apiKey,login
+    #application.resourceTrackingMethod: annotation
+  params:
+    server.insecure: true
+    #application.namespaces: native-argocd-apps

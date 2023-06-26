@@ -1,4 +1,6 @@
 global:
+  logging:
+    level: debug
   codefresh:
     accountId: 628a80b693a15c0f9c13ab75
 
@@ -17,5 +19,5 @@ argo-cd:
       timeout.reconciliation: 20s
       accounts.admin: apiKey,login
       application.resourceTrackingMethod: annotation+label
-    params:
-      application.namespaces: team1-apps
+    #params:
+      #application.namespaces: team1-apps
