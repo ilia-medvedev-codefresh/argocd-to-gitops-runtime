@@ -9,3 +9,5 @@ spec:
   - namespace: demo-app-team1
     server: https://kubernetes.default.svc
     name: in-cluster
+  sourceRepos:
+  - '*'
