@@ -17,3 +17,5 @@ argo-cd:
       timeout.reconciliation: 20s
       accounts.admin: apiKey,login
       application.resourceTrackingMethod: annotation+label
+    params:
+      application.namespaces: argo-apps
