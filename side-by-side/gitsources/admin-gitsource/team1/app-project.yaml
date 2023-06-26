@@ -5,6 +5,9 @@ metadata:
 spec:
   sourceNamespaces:
   - team1-apps
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
   destinations:
   - namespace: demo-app-team1
     server: https://kubernetes.default.svc

@@ -18,4 +18,4 @@ argo-cd:
       accounts.admin: apiKey,login
       application.resourceTrackingMethod: annotation+label
     params:
-      application.namespaces: argo-apps
+      application.namespaces: team1-apps
