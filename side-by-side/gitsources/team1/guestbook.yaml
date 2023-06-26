@@ -8,7 +8,7 @@ spec:
   destination:
     namespace: demo-app-team1
     server: https://kubernetes.default.svc
-  project: team1
+  project: default
   source:
     path: guestbook
     repoURL: https://github.com/argoproj/argocd-example-apps.git
