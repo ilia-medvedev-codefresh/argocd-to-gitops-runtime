@@ -6,9 +6,9 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: demo-app
+    namespace: demo-app-team1
     server: https://kubernetes.default.svc
-  project: default
+  project: team1
   source:
     path: guestbook
     repoURL: https://github.com/argoproj/argocd-example-apps.git

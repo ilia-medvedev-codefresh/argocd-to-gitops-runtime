@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: team1-gitsource
+  labels:
+    codefresh.io/entity: 'git-source'
+    codefresh.io/internal: 'false'
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/ilia-medvedev-codefresh/argocd-to-gitops-runtime.git
+    path: side-by-side/gitsources/team1
+    targetRevision: main
+    directory:
+      include: '*'
+      exclude: ''
+      recurse: true
+  destination:
+    namespace: team1-apps
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      allowEmpty: true
+      prune: true
+      selfHeal: true
+      syncOptions:
+      - CreateNamespace=true

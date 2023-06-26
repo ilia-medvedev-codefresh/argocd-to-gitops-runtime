@@ -1,0 +1,9 @@
+kind: AppProject
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: team1
+spec:
+  sourceNamespaces:
+  - team1-apps
+  destinationNamespace:
+  - demo-app-team1
