@@ -1,0 +1,11 @@
+
+fullnameOverride: codefresh-argo-cd
+crds:
+  install: false
+configs:
+  cm:
+    timeout.reconciliation: 20s
+    accounts.admin: apiKey,login
+    application.resourceTrackingMethod: annotation+label
+  params:
+    application.namespaces: team1-apps

@@ -10,6 +10,9 @@ global:
     ingress:
       enabled: false
 
+argo-rollouts:
+  fullnameOverride: codefresh-argo-rollouts
+
 argo-cd:
   fullnameOverride: codefresh-argo-cd
   crds:
@@ -19,5 +22,5 @@ argo-cd:
       timeout.reconciliation: 20s
       accounts.admin: apiKey,login
       application.resourceTrackingMethod: annotation+label
-    #params:
-      #application.namespaces: team1-apps
+    #params: # Awaiting merge of https://github.com/argoproj/argo-cd/pull/14479/files to codefresh fork
+    #  application.namespaces: team1-apps
